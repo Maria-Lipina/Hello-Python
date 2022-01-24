@@ -5,7 +5,7 @@ def digits (n):
     while n != 0:
         digits.append(n % 10)
         n //= 10
-    return digits #Не забывать, что цифры записываются в список справа-налево!
+    return digits
 
 a = random.randrange(100, 1000)
 print(f'{a} - число в задачах 9 - 10, 12')
