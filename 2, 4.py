@@ -8,11 +8,8 @@ b = random.randint(1, 100)
 if a > b: print(f'max = {a}, min = {b}')
 else: print(f'max = {b}, min = {a}')
 
-#4. Даны два числа. Показать большее и меньшее число
+#4. Найти максимальное из трех чисел
 
 list_a = [4, 9, 10]
-max = list_a[0]
-for i in list_a:
-    if i > max:
-        max = i
-print(max)
+
+print(max(list_a))
