@@ -1,11 +1,13 @@
 import random
 import datetime
+import string
 
 def fill_list(length, min, max): #2.py, если что-то изменится
     result = []
     for i in range(length):
         result.append(random.randint(min, max))
     return result
+
 
 def seed():
     moment = str(datetime.datetime.now())
@@ -18,3 +20,10 @@ def seed():
         if not i % 2:
             seed.append(int(moment[i-2:i]))
     return seed
+
+
+def fill_str_list(el_len, li_len):
+    result = []
+    for i in range(li_len):
+        result.append(''.join(random.choices(string.ascii_letters + string.digits, k = el_len))) #сплагиачено
+    return result
