@@ -22,8 +22,13 @@ def seed():
     return seed
 
 
-def fill_str_list(el_len, li_len):
+def fill_str_list(el_len, li_len, weight = None):
     result = []
     for i in range(li_len):
-        result.append(''.join(random.choices(string.ascii_letters + string.digits, k = el_len))) #сплагиачено
+        result.append(''.join(random.choices(string.ascii_letters + string.digits, weight, k = el_len))) #сплагиачено
     return result
+
+
+""" TODO: чем str отличается от string? Кроме built-in https://docs.python.org/3.10/library/stdtypes.html#str.join
+https://docs.python.org/3.10/library/string.html?highlight=string#module-string 
+"""
