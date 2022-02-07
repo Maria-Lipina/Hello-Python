@@ -22,13 +22,13 @@ def seed():
     return seed
 
 
-def fill_str_list(el_len, li_len, weight = None):
+def fill_str_list(el_len, li_len): #20.py, если что-то изменится. Все-таки искусственно увеличивать вероятность цифр через многократную конкатенацию - не очень красиво
     result = []
     for i in range(li_len):
-        result.append(''.join(random.choices(string.ascii_letters + string.digits, weight, k = el_len))) #сплагиачено
+        result.append(''.join(random.choices(string.ascii_letters + string.digits + string.digits + string.digits + string.digits, k = el_len))) #сплагиачено
     return result
 
 
-""" TODO: чем str отличается от string? Кроме built-in https://docs.python.org/3.10/library/stdtypes.html#str.join
+""" TODO: чем str отличается от string? Кроме built-in https://docs.python.org/3.10/library/stdtypes.html#textseq 
 https://docs.python.org/3.10/library/string.html?highlight=string#module-string 
 """
