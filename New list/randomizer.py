@@ -2,11 +2,18 @@ import random
 import datetime
 import string
 
-def fill_list(length, min, max): #2.py, если что-то изменится
+def fill_ints(length, min, max): #2.py, если что-то изменится
     result = []
     for i in range(length):
         result.append(random.randint(min, max))
     return result
+    
+
+def fill_reals(length:int, min, max, fraction=3):
+    res = []
+    for i in range(length):
+        res.append(round(random.uniform(min, max), fraction))
+    return res
 
 
 def seed():
