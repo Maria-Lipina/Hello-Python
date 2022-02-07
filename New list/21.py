@@ -6,14 +6,13 @@ print("21. Определить, позицию второго вхождени�
 список: ["123", "234", 123, "567"], ищем: "123", ответ: -1
 список: [], ищем: "123", ответ: -1"""
 
-source = ['ORz6', 'ORz6', '368G', 'GD4,oO5']
-source1 = ['4no', 'A3s', '5vj', '4no', '5vj', 'x4n']
+source = ['4no', 'A3s', '5vj', '4no', '5vj', 'x4n']
 
 def positions (source, elem):
     pos = [i for i in range(len(source)) if source[i] == elem]
     return pos
 
-poss = positions(source1, 'x4n')
+poss = positions(source, 'x4n')
 if len(poss) >=2: print(poss[1])
 else: print(-1)
 
