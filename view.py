@@ -19,11 +19,11 @@ def t_text(task):
         10: 'Найти расстояние между двумя точками пространства'
     }
     print(t_tasks[task])
-#
-#
-# def get_input():
-#     print("Введите число")
-#     return input()
+
+
+def get_input():
+    print("Введите число")
+    return input()
 #
 #
 # def show_res(result):

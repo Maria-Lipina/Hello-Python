@@ -2,18 +2,21 @@
 # TODO: мне нужен метод вроде request? Задача просит view показать пользователю инструкцию, какие именно данные от него нужны. Задача проверяет эти полученные входные данные на корректность
 # TODO: сделать так, чтобы запускалась одна задача, а не все (но так, чтобы без ооп классов и т.п. попроще)
 import view as v
-import t1
-import t2
+import runpy
 
-def run (task):
-    all_tasks = \
-        {
-            1: t1.do(),
-            2: t2.do()
-        }
-    return all_tasks[task]
+all_tasks = \
+    {
+        1: 't1',
+        2: 't2'
+    }
 
-task = v.menu()
-v.t_text(task)
-print((run(task)))
+# task = v.menu()
+# v.t_text(task)
+code_f = open('t2.py', 'r')
+code_str = code_f.read()
+code_f.close()
+code = compile(code_str, 't2.py', 'exec') #сюда можно прикрутить портируемость (чтобы, скажем, t1 можно было бы успешно импортировать в другой файл и выполнить только там, а не в t1 и месте назначения
+exec(code)
 
+import runpy
+runpy.run_module(mod_name='t2') #легче и проще, быстрее (скорее всего) но портируемость (я вообще правильно употребляю термин?) не прикрутишь
