@@ -1,8 +1,9 @@
+# По двум заданным числам проверить является ли одно квадратом второго
+# TODO: убрать get_input из самого метода
+
 import view as v
 
 def do():
-    a = 64
-    b = 8
+    a = int(v.get_input())
+    b = int(v.get_input())
     return a == b**2
-
-print(do())
