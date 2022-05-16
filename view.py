@@ -24,7 +24,7 @@ def t_text(task):
 def get_input():
     print("Введите число")
     return input()
-#
-#
-# def show_res(result):
-#     print(f'result = {result}')
+
+
+def show_res(result):
+    print(f'result = {result}')

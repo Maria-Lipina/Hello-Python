@@ -1,8 +1,8 @@
 import view as v
 
 def do():
-    a = int(input())
-    b = int(input())
+    a = 64
+    b = 8
     return a == b**2
 
 print(do())
